@@ -1,5 +1,6 @@
 # Docker base for Symfony project with Nginx, Php and Mariadb
 Test on MacOS Catalina 10.15.7 <br>
+<br>
 If you already have a Symfony project, just copy the docker folder and the docker-compose at the root of your application, and go to "4. Configure .env".
 
 ### 1. Clone this project
