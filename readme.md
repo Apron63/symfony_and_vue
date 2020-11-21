@@ -6,7 +6,7 @@ If you already have a Symfony project, just copy the docker folder and the docke
 ### 1. Clone this project
 ```
 git clone git@github.com:DavidMaarek/docker-base-nginx-php-mariadb-for-symfony.git
-cd symfony-docker-base-nginx-php-mariadb
+cd docker-base-nginx-php-mariadb-for-symfony
 ```
 
 ### 2. Create Symfony project with composer
