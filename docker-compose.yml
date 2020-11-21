@@ -27,10 +27,10 @@ services:
     restart: always
     container_name: sfproject_mariadb
     environment:
-      - MYSQL_DATABASE=api_course
-      - MYSQL_USER=davidmaarek
-      - MYSQL_PASSWORD=davidmaarek
-      - MYSQL_ROOT_PASSWORD=davidmaarek
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - 3306:3306
     volumes:
