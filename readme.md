@@ -1,10 +1,13 @@
 # Docker base for Symfony project with Nginx, Php and Mariadb
 Test on MacOS Catalina 10.15.7 <br>
-<br>
+
 If you already have a Symfony project, just copy the docker folder and the docker-compose at the root of your application, and go to "4. Configure .env".
 
 ### 1. Clone this project
-`git clone project && cd symfony-docker-base-nginx-php-mariadb`
+```
+git clone git@github.com:DavidMaarek/docker-base-nginx-php-mariadb-for-symfony.git
+cd symfony-docker-base-nginx-php-mariadb
+```
 
 ### 2. Create Symfony project with composer
 Run this if if you are building a traditional web application <br>
@@ -13,7 +16,7 @@ Run this if if you are building a traditional web application <br>
 Run this if your are buliding a microservice, console application or API <br>
 `composer create-project symfony/skeleton symfony_project`
 
-### 3.Move the contents of the symfony project folder <br>
+### 3.Move the contents of the symfony project folder
 Run this if if you are building a traditional web application <br>
 `mv symfony_project/* ./ && mv symfony_project/.* ./` <br>
 `rm -rf symfony_project`
@@ -33,7 +36,7 @@ MYSQL_ROOT_PASSWORD=root_password
 
 ### 5. Change domain name (optional)
 By default, it's localhost, but if you want to customize the domain name, go to this file `docker/nginx/default.conf`, and at line 5 and change localhost to whatever you want. <br>
-And on MacOS edit this file `sudo vi /private/etc/hosts`, and add `127.0.0.1   customDomain`
+And on MacOS edit this file `sudo vi /private/etc/hosts`, and add `127.0.0.1   yourCustomDomain`
 
 ### 6. Launch the docker-compose
 At the root of the project, launch this command : <br>
