@@ -3,5 +3,32 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    Content
+    {% verbatim %}
+        <div id="app">
+            <button v-on:click="getAllCategories">Список всех категорий</button>
+            {{ allCategories }}
+            <hr>
+
+            <button v-on:click="getCategory">Oдна категория</button>
+            <input type="text" v-model="inputCatGet" placeholder="Id категории" class="form-control" />
+            {{ getOneCategory }}
+            <hr>
+
+            <button v-on:click="addCategory">Добавить категорию</button>
+            <input type="text" v-model="inputCatAdd" placeholder="Название категории" class="form-control" />
+            {{ addOneCategory }}
+            <hr>
+
+            <button v-on:click="putCategory">Редактировать категорию</button>
+            <input type="text" v-model="inputCatPutId" placeholder="Id категории" class="form-control" />
+            <input type="text" v-model="inputCatPutName" placeholder="Название категории" class="form-control" />
+            {{ putOneCategory }}
+            <hr>
+
+            <button v-on:click="removeCategory">Удалить категорию</button>
+            <input type="text" v-model="inputCatRemove" placeholder="Id категории" class="form-control" />
+            {{ removeOneCategory }}
+            <hr>
+        </div>
+    {% endverbatim %}
 {% endblock %}
