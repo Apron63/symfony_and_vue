@@ -51,8 +51,7 @@ var app = new Vue({
                 body: JSON.stringify({ name: this.inputCatAdd })
             })
                 .then(response => response.json())
-                .then(data => (this.status = data.status))
-            this.addOneCategory = 'Success : ' + this.inputCatAdd
+                .then(data => (this.addOneCategory = data.id))
         },
         putCategory: function () {
             this.status = false
