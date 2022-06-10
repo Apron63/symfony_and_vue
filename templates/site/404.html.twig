@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Страница не существует{% endblock %}
+
+{% block body %}
+    <div class="row" style="margin-bottom: 50px;"></div>
+    <div class="loop text-center" id="content">
+
+        <div>
+            <h1>Ой! Вы попали на несуществующую страницу!</h1>
+            <p>Вероятно, такой объект никогда не существовал или был удален.</p>
+            <a class="btn btn-dark" href="/">Вернуться на главную</a>
+        </div>
+    </div>
+{% endblock %}
